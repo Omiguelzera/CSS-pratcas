@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinadores Filho</title>
+    <style>
+        /*
+        Combinadores: qual tipo de reação entre 2 seletores.
+
+         1. Combinar descendente (espaço)
+         2. Combinar filho(>)
+         3. Combinar irmão adjacente (+)
+         4. Combinar irmão em geral (~)
+
+         [seletor] [combinador] [seletor]
+        */
+
+        .fundo-verde > p {
+            background: green;
+            color: red;
+        }
+
+        .fundo-azul > p{
+            background: blue;
+            color: yellow;
+        }
+
+        .fundo-azul p + span{
+            color:crimson;
+        }
+
+        div + p{
+            color:pink;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="fundo-azul">
+        <p>Parágrafo 1 dentro da div</p>
+        <p>Parágrafo 2 dentro da div</p>
+       <span>
+        <p>Parágrafo 3 dentro da div, dentro do span</p>
+       </span>
+    </div>
+
+    <p>Indio faz uga buga</p>
+
+      
+    <div class="fundo-verde">
+    <p>Parágrafo 4 fora da div</p>
+    <p>Parágrafo 5 fora da div</p>
+</div>
+ 
+   <p>Parágrafo 6 fora da div</p>
+   <p>Parágrafo 7 fora da div</p>
+</body>
+</html>
